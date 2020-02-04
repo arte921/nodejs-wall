@@ -1,8 +1,6 @@
 var http = require('http');
 var fs = require('fs');
-
 var page;
-
 http.createServer(function (req,res){
     try{
       if(req.url != '/'){
@@ -13,8 +11,6 @@ http.createServer(function (req,res){
     }catch{
       page = '404';
     }
-
-
   console.log(req.url);
   res.write(page);
   res.end();
