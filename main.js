@@ -1,6 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var page;
+var port = 2109;
 http.createServer(function (req,res){
     try{
       if(req.url != '/'){
@@ -14,6 +15,6 @@ http.createServer(function (req,res){
   console.log(req.url);
   res.write(page);
   res.end();
-}).listen(2109);
+}).listen(port);
 
-console.log('started');
+console.log('started on port ' + port);
